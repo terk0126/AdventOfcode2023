@@ -1,5 +1,5 @@
 const fs = require("fs");
-fileContents = fs.readFileSync("1. December/PuzzleInput.txt", 'utf8').split("\n")
+fileContents = fs.readFileSync("1. December/PuzzleInput.txt", 'utf8').split("\r\n")
 
 const digits = [];
 
