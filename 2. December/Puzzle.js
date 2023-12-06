@@ -24,7 +24,9 @@ fileContents.forEach(element => {
 
     //var temp = element.splice(0,0)
     
-        const count = playsMatch[0].split(' ')[0]
+        const plays
+            "color": 
+            playsMatch[0].split(' ')[0]}
     
 
     games.push({
