@@ -16,12 +16,10 @@ fileContents.forEach(line => {
 });
 
 function commonNumbers(numbersArray) {
-
-
     const winningNumbers = numbersArray.map(el => el[1].slice(0,10))
     const myNumbers = numbersArray.map(el => el[1].slice(10))
     const cardNumber = numbersArray.map(el => parseInt(el[0]))
-
+    
     const numbersInCommon = []
 
     for (let i = 0; i < numbersArray.length; i++) {
