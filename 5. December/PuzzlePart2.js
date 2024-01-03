@@ -44,14 +44,14 @@ seedPairs.forEach(seedpair => {
     
 
     for (let j = 0; j < seedpair[1]; j++) {
-    const seed = seedpair[0]+j
+    const seed = seedpair[0]+j-1
 
 
 
     var soil = seed
     for (let i = 0; i < seedToSoil.length; i++) {
         const map = seedToSoil[i];
-        if (seed >= map[1] && seed <= map[1]+map[2]) {
+        if (seed >= map[1] && seed < map[1]+map[2]) {
             var soil = map[0]+seed-map[1]
             break;
         } else {continue}   
@@ -60,7 +60,7 @@ seedPairs.forEach(seedpair => {
     var fertilizer = soil
     for (let i = 0; i < soilToFertilizer.length; i++) {
         const map = soilToFertilizer[i];
-        if (soil >= map[1] && soil <= map[1]+map[2]) {
+        if (soil >= map[1] && soil < map[1]+map[2]) {
             var fertilizer = map[0]+soil-map[1]
             break;
         } else {continue} 
@@ -69,7 +69,7 @@ seedPairs.forEach(seedpair => {
     var water = fertilizer
     for (let i = 0; i < fertilizerToWater.length; i++) {
         const map = fertilizerToWater[i];
-        if (fertilizer >= map[1] && fertilizer <= map[1]+map[2]) {
+        if (fertilizer >= map[1] && fertilizer < map[1]+map[2]) {
             var water = map[0]+fertilizer-map[1]
             break;
         } else {continue} 
@@ -78,7 +78,7 @@ seedPairs.forEach(seedpair => {
     var light = water
     for (let i = 0; i < waterToLight.length; i++) {
         const map = waterToLight[i];
-        if (water >= map[1] && water <= map[1]+map[2]) {
+        if (water >= map[1] && water < map[1]+map[2]) {
             var light = map[0]+water-map[1]
             break;
         } else {continue} 
@@ -87,7 +87,7 @@ seedPairs.forEach(seedpair => {
     var temperature = light
     for (let i = 0; i < lightToTemperature.length; i++) {
         const map = lightToTemperature[i];
-        if (light >= map[1] && light <= map[1]+map[2]) {
+        if (light >= map[1] && light < map[1]+map[2]) {
             var temperature = map[0]+light-map[1]
             break;
         } else {continue} 
@@ -96,7 +96,7 @@ seedPairs.forEach(seedpair => {
     var humidity = temperature
     for (let i = 0; i < temperatureToHumidity.length; i++) {
         const map = temperatureToHumidity[i];
-        if (temperature >= map[1] && temperature <= map[1]+map[2]) {
+        if (temperature >= map[1] && temperature < map[1]+map[2]) {
             var humidity = map[0]+temperature-map[1]
             break;
         } else {continue} 
@@ -105,7 +105,7 @@ seedPairs.forEach(seedpair => {
     var location = humidity
     for (let i = 0; i < humidityToLocation.length; i++) {
         const map = humidityToLocation[i];
-        if (humidity >= map[1] && humidity <= map[1]+map[2]) {
+        if (humidity >= map[1] && humidity < map[1]+map[2]) {
             var location = map[0]+humidity-map[1]
             break;
         } else {continue} 
